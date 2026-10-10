@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Szyfrator GA-DE-RY-PO-LU-KI | 69 DSH KILIMANDŻARO</title>
+    <style>
+        :root {
+            --bg-color: #0d0d0d;
+            --card-bg: #171717;
+            --text-color: #ffffff;
+            --text-muted: #a0a0a0;
+            --accent-border: #ffffff;
+            --button-hover: #333333;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: var(--card-bg);
+            border: 2px solid var(--accent-border);
+            border-radius: 16px;
+            padding: 30px;
+            max-width: 550px;
+            width: 100%;
+            box-shadow: 0 8px 32px rgba(255, 255, 255, 0.05);
+            text-align: center;
+        }
+
+        .logo-container {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .team-logo {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: contain;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        .subtitle {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 25px;
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            text-align: left;
+        }
+
+        label {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-muted);
+        }
+
+        textarea {
+            background-color: #000000;
+            color: #ffffff;
+            border: 1px solid #444;
+            border-radius: 8px;
+            padding: 12px;
+            font-size: 1rem;
+            resize: vertical;
+            min-height: 100px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        textarea:focus {
+            border-color: var(--accent-border);
+        }
+
+        .actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        button {
+            background-color: transparent;
+            color: var(--text-color);
+            border: 1px solid var(--accent-border);
+            padding: 10px 18px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.8rem;
+            transition: all 0.2s ease;
+            flex: 1;
+        }
+
+        button:hover {
+            background-color: var(--accent-border);
+            color: var(--bg-color);
+        }
+
+        .footer {
+            margin-top: 25px;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            border-top: 1px solid #333;
+            padding-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="logo-container">
+        <!-- Logo drużyny 69 DSH KILIMANDŻARO -->
+        <svg class="team-logo" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="250" cy="250" r="235" fill="black" stroke="white" stroke-width="15"/>
+            <text x="250" y="105" text-anchor="middle" fill="white" font-family="sans-serif" font-weight="bold" font-size="42">69 DSH</text>
+            <text x="250" y="150" text-anchor="middle" fill="white" font-family="sans-serif" font-weight="bold" font-size="38" letter-spacing="3">KILIMANDŻARO</text>
+            <!-- Lewa góra -->
+            <polygon points="120,360 170,225 220,360" fill="black" stroke="white" stroke-width="10" stroke-linejoin="round"/>
+            <polygon points="170,225 155,260 162,255 170,265 178,255 185,260" fill="white"/>
+            <!-- Środkowa góra -->
+            <polygon points="160,360 250,170 340,360" fill="black" stroke="white" stroke-width="10" stroke-linejoin="round"/>
+            <polygon points="250,170 230,210 240,205 250,218 260,205 270,210" fill="white"/>
+            <!-- Prawa góra -->
+            <polygon points="280,360 330,220 380,360" fill="black" stroke="white" stroke-width="10" stroke-linejoin="round"/>
+            <polygon points="330,220 315,255 322,250 330,260 338,250 345,255" fill="white"/>
+        </svg>
+    </div>
+
+    <h1>SZYFRATOR HARCERSKI</h1>
+    <p class="subtitle">GA - DE - RY - PO - LU - KI</p>
+
+    <div class="input-group">
+        <label for="tekst">Wprowadź wiadomość:</label>
+        <textarea id="tekst" placeholder="Wpisz tekst do zaszyfrowania lub odszyfrowania..." oninput="szyfruj()"></textarea>
+
+        <label for="wynik">Wynik:</label>
+        <textarea id="wynik" readonly placeholder="Wynik pojawi się tutaj automatycznie..."></textarea>
+
+        <div class="actions">
+            <button onclick="kopiujWynik()">Kopiuj wynik</button>
+            <button onclick="wyczysc()">Wyczyszczenie</button>
+        </div>
+    </div>
+
+    <div class="footer">
+        Narzędzie harcerskie przygotowane dla drużyny
+    </div>
+</div>
+
+<script>
+    const pary = {
+        'g': 'a', 'a': 'g', 'd': 'e', 'e': 'd',
+        'r': 'y', 'y': 'r', 'p': 'o', 'o': 'p',
+        'l': 'u', 'u': 'l', 'k': 'i', 'i': 'k',
+        'G': 'A', 'A': 'G', 'D': 'E', 'E': 'D',
+        'R': 'Y', 'Y': 'R', 'P': 'O', 'O': 'P',
+        'L': 'U', 'U': 'L', 'K': 'I', 'I': 'K'
+    };
+
+    function szyfruj() {
+        const wejscie = document.getElementById('tekst').value;
+        let wyjscie = '';
+
+        for (let i = 0; i < wejscie.length; i++) {
+            const znak = wejscie[i];
+            wyjscie += pary[znak] || znak;
+        }
+
+        document.getElementById('wynik').value = wyjscie;
+    }
+
+    function kopiujWynik() {
+        const poleWyniku = document.getElementById('wynik');
+        if (!poleWyniku.value) return;
+
+        poleWyniku.select();
+        navigator.clipboard.writeText(poleWyniku.value);
+        
+        const btn = event.target;
+        const orgText = btn.innerText;
+        btn.innerText = "SKOPIOWANO!";
+        setTimeout(() => { btn.innerText = orgText; }, 1500);
+    }
+
+    function wyczysc() {
+        document.getElementById('tekst').value = '';
+        document.getElementById('wynik').value = '';
+    }
+</script>
+
+</body>
+</html>
